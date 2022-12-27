@@ -1,7 +1,11 @@
 /* eslint-disable no-console */
-import readline from 'readline';
-import { checkDigits } from './checkDigits.js';
-import { generateDigits } from './digitsGenerator.js';
+// import readline from 'readline';
+// import { checkDigits } from './checkDigits.js';
+// import { generateDigits } from './digitsGenerator.js';
+
+const readline = require('readline');
+const { checkDigits } = require('./checkDigits.js');
+const { generateDigits } = require('./digitsGenerator.js');
 
 const conditionToWin = ['Bull', 'Bull', 'Bull', 'Bull'];
 const digitsToGuess = generateDigits();
@@ -14,7 +18,7 @@ const terminal = readline.createInterface({
   output: process.stdout,
 });
 
-export const outputMessage = () => {
+const outputMessage = () => {
   const message = `\nInput 4 digits (from 1 to 10)\n`;
 
   terminal.question(message, (digits) => {
@@ -32,3 +36,5 @@ export const outputMessage = () => {
 };
 
 outputMessage();
+
+module.exports = { outputMessage };

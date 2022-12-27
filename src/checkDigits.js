@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-export const checkDigits = (digits, guessDigits) => {
+const checkDigits = (digits, guessDigits) => {
   const result = [];
 
   for (let i = 0; i < digits.length; i++) {
@@ -16,3 +16,5 @@ export const checkDigits = (digits, guessDigits) => {
 
   return result;
 };
+
+module.exports = { checkDigits };

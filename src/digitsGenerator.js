@@ -1,4 +1,4 @@
-export const generateDigits = () => {
+const generateDigits = () => {
   let digits = '';
 
   do {
@@ -7,3 +7,5 @@ export const generateDigits = () => {
 
   return digits;
 };
+
+module.exports = { generateDigits };
